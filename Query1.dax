@@ -1,0 +1,11 @@
+﻿EVALUATE
+ROW ( "Teste", 
+ CALCULATE(
+ [Total Vendas]*1.3,
+ Tb_ItensNotas[Quantidade]>20
+)
++
+CALCULATE(
+ [Total Vendas]*0.5,
+ NOT Tb_ItensNotas[Quantidade]>20
+))
